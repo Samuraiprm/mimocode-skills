@@ -1,14 +1,14 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/skills-13-brightgreen?style=for-the-badge&logo=shield&logoColor=white" alt="Skills">
-  <img src="https://img.shields.io/badge/frameworks-5-blue?style=for-the-badge" alt="Frameworks">
+  <img src="https://img.shields.io/badge/skills-23-brightgreen?style=for-the-badge&logo=shield&logoColor=white" alt="Skills">
+  <img src="https://img.shields.io/badge/frameworks-6-blue?style=for-the-badge" alt="Frameworks">
   <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" alt="License">
 </p>
 
 <h1 align="center">MiMoCode Skills</h1>
 
 <p align="center">
-  <b>13 production-ready skills for AI coding agents — cybersecurity, design, engineering workflows</b><br>
-  Adapted from <a href="https://github.com/garrytan/gstack">gstack</a>, <a href="https://github.com/affaan-m/ECC">ECC</a>, <a href="https://github.com/bergside/typeui">TypeUI</a>, and security research repos
+  <b>23 production-ready skills for AI coding agents — cybersecurity, design, engineering, IoT/hardware security</b><br>
+  Adapted from <a href="https://github.com/garrytan/gstack">gstack</a>, <a href="https://github.com/affaan-m/ECC">ECC</a>, <a href="https://github.com/bergside/typeui">TypeUI</a>, <a href="https://github.com/BrownFineSecurity/iothackbot">IoTHackBot</a>, and security research repos
 </p>
 
 <p align="center">
@@ -23,7 +23,7 @@
 
 ## What is this?
 
-A collection of **13 structured skills** that give AI coding agents specialized capabilities:
+A collection of **23 structured skills** that give AI coding agents specialized capabilities:
 
 - **Code review** with confidence scoring and severity classification
 - **Systematic debugging** with root cause analysis
@@ -33,6 +33,7 @@ A collection of **13 structured skills** that give AI coding agents specialized 
 - **Incident response** with NIST/SANS playbooks
 - **Design systems** with universal UI/UX principles
 - **TDD workflows** with RED/GREEN/REFACTOR cycles
+- **IoT/Hardware security** — firmware, Android, JTAG/UART, network
 
 Each skill is a self-contained `SKILL.md` file with:
 - When to use (triggers)
@@ -103,6 +104,21 @@ git submodule add https://github.com/Samuraiprm/mimocode-skills.git .mimocode-sk
 | [`design-system`](skills/design-system/SKILL.md) | [TypeUI](https://github.com/bergside/typeui) | Universal design principles — 4pt grid spacing, typography scale, WCAG accessibility, 12 UX laws |
 | [`design-audit`](skills/design-audit/SKILL.md) | [TypeUI](https://github.com/bergside/typeui) | UI audit — spacing, typography, contrast, components, interaction, accessibility. Compliance check |
 
+### IoT & Hardware Security
+
+| Skill | Source | Description |
+|-------|--------|-------------|
+| [`iot-nmap`](iot-nmap/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | Network recon — two-phase scan, service detection, NSE scripts |
+| [`iot-chipsec`](iot-chipsec/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | UEFI/BIOS firmware — rootkit detection, EFI inventory, NVRAM |
+| [`iot-apktool`](iot-apktool/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | Android APK — resource decoding, smali code |
+| [`iot-jadx`](iot-jadx/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | Android decompile — DEX → Java, hardcoded credentials |
+| [`iot-jtagprobe`](iot-jtagprobe/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | Hardware debug — SWD/JTAG probe, OPEN/LOCKED/DEAD |
+| [`iot-picocom`](iot-picocom/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | UART console — bootloader, shell, firmware extraction |
+| [`iot-telnetshell`](iot-telnetshell/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | Telnet shell — unauthenticated access, BusyBox |
+| [`iot-wsdiscovery`](iot-wsdiscovery/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | WS-Discovery — ONVIF camera and IoT detection |
+| [`iot-iotnet`](iot-iotnet/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | Traffic analysis — IoT protocols, vulnerabilities |
+| [`iot-ffind`](iot-ffind/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | File finder — type detection, ext2/3/4, F2FS extraction |
+
 ---
 
 ## Usage
@@ -168,6 +184,26 @@ incident-response → threat-hunting → code-audit
 ### UI/UX
 ```
 design-system → design-audit
+```
+
+### IoT Pentest
+```
+iot-nmap → iot-wsdiscovery → iot-iotnet → pentest
+```
+
+### Firmware Analysis
+```
+iot-chipsec → iot-ffind → code-audit
+```
+
+### Android Reverse Engineering
+```
+iot-apktool → iot-jadx → code-audit
+```
+
+### Hardware Debug
+```
+iot-jtagprobe → iot-picocom → iot-telnetshell
 ```
 
 ---
@@ -318,6 +354,7 @@ These skills work with any AI coding agent that supports markdown files:
 | [TypeUI](https://github.com/bergside/typeui) | — | design-system, design-audit |
 | [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | — | pentest, incident-response, threat-hunting |
 | [CyberSecurity-Skills](https://github.com/Hi-FullHouse/CyberSecurity-Skills) | — | code-audit |
+| [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | — | iot-nmap, iot-chipsec, iot-apktool, iot-jadx, iot-jtagprobe, iot-picocom, iot-telnetshell, iot-wsdiscovery, iot-iotnet, iot-ffind |
 
 ---
 

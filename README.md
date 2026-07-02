@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/навыки-13-brightgreen?style=for-the-badge&logo=shield&logoColor=white" alt="Навыки">
-  <img src="https://img.shields.io/badge/фреймворки-5-blue?style=for-the-badge" alt="Фреймворки">
+  <img src="https://img.shields.io/badge/навыки-23-brightgreen?style=for-the-badge&logo=shield&logoColor=white" alt="Навыки">
+  <img src="https://img.shields.io/badge/фреймворки-6-blue?style=for-the-badge" alt="Фреймворки">
   <img src="https://img.shields.io/badge/лицензия-MIT-green?style=for-the-badge" alt="Лицензия">
   <img src="https://img.shields.io/badge/язык-🇷🇺%20English-blueviolet?style=for-the-badge" alt="Язык">
 </p>
@@ -8,8 +8,8 @@
 <h1 align="center">MiMoCode Skills</h1>
 
 <p align="center">
-  <b>13 готовых навыков для AI-агентов — кибербезопасность, дизайн, инженерные процессы</b><br>
-  Адаптировано из <a href="https://github.com/garrytan/gstack">gstack</a>, <a href="https://github.com/affaan-m/ECC">ECC</a>, <a href="https://github.com/bergside/typeui">TypeUI</a> и репозиториев безопасности
+  <b>23 готовых навыка для AI-агентов — кибербезопасность, дизайн, инженерные процессы, IoT/hardware security</b><br>
+  Адаптировано из <a href="https://github.com/garrytan/gstack">gstack</a>, <a href="https://github.com/affaan-m/ECC">ECC</a>, <a href="https://github.com/bergside/typeui">TypeUI</a>, <a href="https://github.com/BrownFineSecurity/iothackbot">IoTHackBot</a> и репозиториев безопасности
 </p>
 
 <p align="center">
@@ -25,7 +25,7 @@
 
 ## Что это?
 
-Коллекция из **13 структурированных навыков**, которые дают AI-агентам специализированные возможности:
+Коллекция из **23 структурированных навыков**, которые дают AI-агентам специализированные возможности:
 
 - **Ревью кода** с оценкой уверенности и классификацией серьёзности
 - **Систематический дебаггинг** с анализом корневой причины
@@ -35,6 +35,7 @@
 - **Реагирование на инциденты** с плейбуками NIST/SANS
 - **Дизайн-системы** с универсальными принципами UI/UX
 - **TDD процессы** с циклами RED/GREEN/REFACTOR
+- **IoT/Hardware Security** — анализ прошивок, Android, JTAG/UART, сеть
 
 Каждый навык — это самодостаточный файл `SKILL.md` с:
 - Триггерами (когда использовать)
@@ -105,6 +106,21 @@ git submodule add https://github.com/Samuraiprm/mimocode-skills.git .mimocode-sk
 | [`design-system`](design-system/SKILL.md) | [TypeUI](https://github.com/bergside/typeui) | Универсальные принципы — 4pt grid, typography scale, WCAG, 12 UX-законов |
 | [`design-audit`](design-audit/SKILL.md) | [TypeUI](https://github.com/bergside/typeui) | Аудит UI — spacing, typography, contrast, components, interaction, accessibility |
 
+### IoT и Hardware Security
+
+| Навык | Источник | Описание |
+|-------|----------|----------|
+| [`iot-nmap`](iot-nmap/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | Сетевая разведка — двухфазовый скан, service detection, NSE scripts |
+| [`iot-chipsec`](iot-chipsec/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | Анализ UEFI/BIOS — rootkit detection, EFI inventory, NVRAM |
+| [`iot-apktool`](iot-apktool/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | Android APK — декодирование ресурсов, smali код |
+| [`iot-jadx`](iot-jadx/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | Android decompile — DEX → Java, hardcoded credentials |
+| [`iot-jtagprobe`](iot-jtagprobe/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | Hardware debug — SWD/JTAG probe, OPEN/LOCKED/DEAD |
+| [`iot-picocom`](iot-picocom/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | UART консоль — bootloader, shell, firmware extraction |
+| [`iot-telnetshell`](iot-telnetshell/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | Telnet shell — unauthenticated access, BusyBox |
+| [`iot-wsdiscovery`](iot-wsdiscovery/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | WS-Discovery — обнаружение ONVIF камер и IoT |
+| [`iot-iotnet`](iot-iotnet/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | Анализ трафика — протоколы IoT, уязвимости |
+| [`iot-ffind`](iot-ffind/SKILL.md) | [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | Поиск файлов — type detection, ext2/3/4, F2FS extraction |
+
 ---
 
 ## Использование
@@ -170,6 +186,26 @@ incident-response → threat-hunting → code-audit
 ### UI/UX
 ```
 design-system → design-audit
+```
+
+### IoT пентест
+```
+iot-nmap → iot-wsdiscovery → iot-iotnet → pentest
+```
+
+### Firmware анализ
+```
+iot-chipsec → iot-ffind → code-audit
+```
+
+### Android реверс
+```
+iot-apktool → iot-jadx → code-audit
+```
+
+### Hardware debug
+```
+iot-jtagprobe → iot-picocom → iot-telnetshell
 ```
 
 ---
@@ -298,6 +334,107 @@ Fix: Использовать параметризованные запросы
 
 ---
 
+## IoT и Hardware Security (из IoTHackBot)
+
+### iot-nmap
+
+**Когда:** сетевая разведка, сканирование портов
+
+**Workflow:**
+1. Быстрый SYN scan всех 65535 портов
+2. Service detection на найденных портах
+3. NSE scripts для доп. enumeration
+
+**Особенность:** Автоматически обрабатывает "host down" с -Pn
+
+### iot-chipsec
+
+**Когда:** анализ UEFI/BIOS прошивок
+
+**Возможности:**
+- Детектирует rootkit'ы: LoJax, ThinkPwn, HackingTeam, MosaicRegressor
+- Генерирует EFI inventory с хэшами (MD5, SHA256)
+- Извлекает NVRAM переменные
+- Парсит SPI flash descriptors
+
+### iot-apktool
+
+**Когда:** reverse engineering Android APK
+
+**Возможности:**
+- Декодирует AndroidManifest.xml
+- Извлекает ресурсы, layouts, strings
+- Disassemble в smali код
+- Репакетинг модифицированных APK
+
+### iot-jadx
+
+**Когда:** декомпиляция Android приложений
+
+**Возможности:**
+- Конвертирует DEX → читаемый Java исходник
+- Поиск hardcoded credentials
+- Анализ логики приложения
+
+### iot-jtagprobe
+
+**Когда:** hardware debug, JTAG/SWD тестирование
+
+**Возможности:**
+- Классифицирует устройства: OPEN / LOCKED / DEAD
+- Sweep SWD и JTAG на разных clock speeds
+- Декодирует DPIDR/IDCODE → вендор (STM32, NXP, Nordic, TI)
+- Halt + memory read для подтверждения контроля
+
+### iot-picocom
+
+**Когда:** UART консоль к IoT устройствам
+
+**Возможности:**
+- Manipulation bootloader'а
+- Shell enumeration
+- Firmware extraction
+- Python helper скрипт для автоматизации
+
+### iot-telnetshell
+
+**Когда:** telnet доступ к IoT
+
+**Возможности:**
+- Тестирование unauthenticated shell
+- Device enumeration
+- BusyBox command handling
+- Pre-built enumeration скрипты
+
+### iot-wsdiscovery
+
+**Когда:** обнаружение IoT устройств в сети
+
+**Возможности:**
+- WS-Discovery протокол сканер
+- Обнаружение ONVIF камер
+- Автоматическое определение subnet
+
+### iot-iotnet
+
+**Когда:** анализ сетевого трафика IoT
+
+**Возможности:**
+- Детектирует протоколы IoT
+- Находит уязвимости в трафике
+- Анализ PCAP файлов
+
+### iot-ffind
+
+**Когда:** поиск и анализ файлов в firmware
+
+**Возможности:**
+- Определяет типы файлов
+- Извлекает ext2/3/4 и F2FS файловые системы
+- Предназначен для firmware анализа
+
+---
+
 ## Совместимость
 
 Навыки работают с любым AI-агентом, поддерживающим markdown:
@@ -320,6 +457,7 @@ Fix: Использовать параметризованные запросы
 | [TypeUI](https://github.com/bergside/typeui) | — | design-system, design-audit |
 | [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | — | pentest, incident-response, threat-hunting |
 | [CyberSecurity-Skills](https://github.com/Hi-FullHouse/CyberSecurity-Skills) | — | code-audit |
+| [IoTHackBot](https://github.com/BrownFineSecurity/iothackbot) | — | iot-nmap, iot-chipsec, iot-apktool, iot-jadx, iot-jtagprobe, iot-picocom, iot-telnetshell, iot-wsdiscovery, iot-iotnet, iot-ffind |
 
 ---
 
