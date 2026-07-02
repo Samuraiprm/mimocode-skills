@@ -1,126 +1,128 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/skills-13-brightgreen?style=for-the-badge&logo=shield&logoColor=white" alt="Skills">
-  <img src="https://img.shields.io/badge/frameworks-5-blue?style=for-the-badge" alt="Frameworks">
-  <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/badge/навыки-13-brightgreen?style=for-the-badge&logo=shield&logoColor=white" alt="Навыки">
+  <img src="https://img.shields.io/badge/фреймворки-5-blue?style=for-the-badge" alt="Фреймворки">
+  <img src="https://img.shields.io/badge/лицензия-MIT-green?style=for-the-badge" alt="Лицензия">
+  <img src="https://img.shields.io/badge/язык-🇷🇺%20English-blueviolet?style=for-the-badge" alt="Язык">
 </p>
 
 <h1 align="center">MiMoCode Skills</h1>
 
 <p align="center">
-  <b>13 production-ready skills for AI coding agents — cybersecurity, design, engineering workflows</b><br>
-  Adapted from <a href="https://github.com/garrytan/gstack">gstack</a>, <a href="https://github.com/affaan-m/ECC">ECC</a>, <a href="https://github.com/bergside/typeui">TypeUI</a>, and security research repos
+  <b>13 готовых навыков для AI-агентов — кибербезопасность, дизайн, инженерные процессы</b><br>
+  Адаптировано из <a href="https://github.com/garrytan/gstack">gstack</a>, <a href="https://github.com/affaan-m/ECC">ECC</a>, <a href="https://github.com/bergside/typeui">TypeUI</a> и репозиториев безопасности
 </p>
 
 <p align="center">
-  <a href="#quick-start">Quick Start</a> •
-  <a href="#skills-catalog">Skills</a> •
-  <a href="#usage">Usage</a> •
-  <a href="#workflows">Workflows</a> •
-  <a href="#sources">Sources</a>
+  <a href="#быстрый-старт">Быстрый старт</a> •
+  <a href="#каталог-навыков">Навыки</a> •
+  <a href="#использование">Использование</a> •
+  <a href="#рабочие-процессы">Workflow'ы</a> •
+  <a href="#источники">Источники</a> •
+  <a href="README_EN.md">English</a>
 </p>
 
 ---
 
-## What is this?
+## Что это?
 
-A collection of **13 structured skills** that give AI coding agents specialized capabilities:
+Коллекция из **13 структурированных навыков**, которые дают AI-агентам специализированные возможности:
 
-- **Code review** with confidence scoring and severity classification
-- **Systematic debugging** with root cause analysis
-- **QA testing** with health scores and triage
-- **Security audits** with OWASP/WCAG checklists
-- **Penetration testing** with PTES methodology
-- **Incident response** with NIST/SANS playbooks
-- **Design systems** with universal UI/UX principles
-- **TDD workflows** with RED/GREEN/REFACTOR cycles
+- **Ревью кода** с оценкой уверенности и классификацией серьёзности
+- **Систематический дебаггинг** с анализом корневой причины
+- **QA тестирование** с оценкой здоровья и триажем
+- **Безопасный аудит** с чеклистами OWASP/WCAG
+- **Пентест** с методологией PTES
+- **Реагирование на инциденты** с плейбуками NIST/SANS
+- **Дизайн-системы** с универсальными принципами UI/UX
+- **TDD процессы** с циклами RED/GREEN/REFACTOR
 
-Each skill is a self-contained `SKILL.md` file with:
-- When to use (triggers)
-- Step-by-step workflow
-- Commands and code examples
-- Output format
+Каждый навык — это самодостаточный файл `SKILL.md` с:
+- Триггерами (когда использовать)
+- Пошаговым workflow'ом
+- Командами и примерами кода
+- Форматом вывода
 
 ---
 
-## Quick Start
+## Быстрый старт
 
-### Option 1: Clone to MiMoCode
+### Вариант 1: Клонировать целиком
 
 ```bash
 git clone https://github.com/Samuraiprm/mimocode-skills.git ~/.mimocode/skills
 ```
 
-### Option 2: Copy specific skills
+### Вариант 2: Скопировать конкретные навыки
 
 ```bash
 git clone https://github.com/Samuraiprm/mimocode-skills.git /tmp/mimocode-skills
 
-# Pick only what you need
+# Выбрать только нужное
 cp -r /tmp/mimocode-skills/code-review ~/.mimocode/skills/
 cp -r /tmp/mimocode-skills/investigate ~/.mimocode/skills/
 cp -r /tmp/mimocode-skills/security-review ~/.mimocode/skills/
 ```
 
-### Option 3: Use in any project
+### Вариант 3: Использовать в проекте
 
 ```bash
-# Clone into your project
+# Клонировать в проект
 git clone https://github.com/Samuraiprm/mimocode-skills.git .mimocode-skills
 
-# Or as a submodule
+# Или как submodule
 git submodule add https://github.com/Samuraiprm/mimocode-skills.git .mimocode-skills
 ```
 
 ---
 
-## Skills Catalog
+## Каталог навыков
 
-### Engineering Workflow
+### Инженерные процессы
 
-| Skill | Source | Description |
-|-------|--------|-------------|
-| [`code-review`](skills/code-review/SKILL.md) | [gstack](https://github.com/garrytan/gstack) | Pre-landing PR review — SQL safety, race conditions, trust boundary violations. Confidence scoring (1-10), severity classification (P0-P3) |
-| [`investigate`](skills/investigate/SKILL.md) | [gstack](https://github.com/garrytan/gstack) | Systematic debugging — Iron Law: no fixes without root cause. 5 phases, 3-strike rule, structured debug report |
-| [`qa-test`](skills/qa-test/SKILL.md) | [gstack](https://github.com/garrytan/gstack) | QA testing web apps — 3 tiers (Quick/Standard/Exhaustive), health score across 8 categories, before/after comparison |
-| [`search-first`](skills/search-first/SKILL.md) | [ECC](https://github.com/affaan-m/ECC) | Research before coding — search package registries, GitHub, docs. Adopt/Extend/Build decision matrix |
-| [`verification-loop`](skills/verification-loop/SKILL.md) | [ECC](https://github.com/affaan-m/ECC) | Quality gates — build → types → lint → tests → security → diff. Stop and fix on failure |
-| [`tdd-workflow`](skills/tdd-workflow/SKILL.md) | [ECC](https://github.com/affaan-m/ECC) | Test-driven development — RED → GREEN → REFACTOR. 80%+ coverage, git checkpoints |
+| Навык | Источник | Описание |
+|-------|----------|----------|
+| [`code-review`](code-review/SKILL.md) | [gstack](https://github.com/garrytan/gstack) | Ревью PR перед мержем — SQL safety, race conditions, trust boundary. Confidence score (1-10), severity (P0-P3) |
+| [`investigate`](investigate/SKILL.md) | [gstack](https://github.com/garrytan/gstack) | Систематический дебаггинг — Iron Law: нет фикса без root cause. 5 фаз, 3-strike rule |
+| [`qa-test`](qa-test/SKILL.md) | [gstack](https://github.com/garrytan/gstack) | QA тестирование web-приложений — 3 tier'а, health score по 8 категориям, до/после сравнение |
+| [`search-first`](search-first/SKILL.md) | [ECC](https://github.com/affaan-m/ECC) | Исследование перед кодом — поиск в registries, GitHub, docs. Adopt/Extend/Build матрица |
+| [`verification-loop`](verification-loop/SKILL.md) | [ECC](https://github.com/affaan-m/ECC) | Quality gates — build → types → lint → tests → security → diff. Стоп при ошибке |
+| [`tdd-workflow`](tdd-workflow/SKILL.md) | [ECC](https://github.com/affaan-m/ECC) | TDD — RED → GREEN → REFACTOR. 80%+ coverage, git checkpoints |
 
-### Security
+### Безопасность
 
-| Skill | Source | Description |
-|-------|--------|-------------|
-| [`security-review`](skills/security-review/SKILL.md) | [ECC](https://github.com/affaan-m/ECC) | Security checklist — secrets, input validation, auth, API security, data protection. PASS/FAIL verification |
-| [`code-audit`](skills/code-audit/SKILL.md) | [CyberSecurity-Skills](https://github.com/Hi-FullHouse/CyberSecurity-Skills) | Security code audit — static analysis (bandit, semgrep, gosec), vulnerability patterns, framework-specific checks |
-| [`pentest`](skills/pentest/SKILL.md) | [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | Penetration testing — PTES lifecycle: recon → scanning → exploitation → post-exploitation → report |
-| [`incident-response`](skills/incident-response/SKILL.md) | [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | IR procedures — NIST/SANS PICERL framework, playbooks for ransomware, phishing, data breach, insider threat |
-| [`threat-hunting`](skills/threat-hunting/SKILL.md) | [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | Proactive threat hunting — hypothesis-driven, MITRE ATT&CK mapping, detection rule creation |
+| Навык | Источник | Описание |
+|-------|----------|----------|
+| [`security-review`](security-review/SKILL.md) | [ECC](https://github.com/affaan-m/ECC) | Чеклист безопасности — secrets, input, auth, API, data. PASS/FAIL верификация |
+| [`code-audit`](code-audit/SKILL.md) | [CyberSecurity-Skills](https://github.com/Hi-FullHouse/CyberSecurity-Skills) | Аудит кода — static analysis (bandit, semgrep, gosec), паттерны уязвимостей |
+| [`pentest`](pentest/SKILL.md) | [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | Пентест — PTES: recon → scanning → exploitation → post-exploitation → report |
+| [`incident-response`](incident-response/SKILL.md) | [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | IR — NIST/SANS PICERL, плейбуки: ransomware, phishing, data breach, insider threat |
+| [`threat-hunting`](threat-hunting/SKILL.md) | [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | Proactive hunting — hypothesis-driven, MITRE ATT&CK, detection rules |
 
-### Design
+### Дизайн
 
-| Skill | Source | Description |
-|-------|--------|-------------|
-| [`design-system`](skills/design-system/SKILL.md) | [TypeUI](https://github.com/bergside/typeui) | Universal design principles — 4pt grid spacing, typography scale, WCAG accessibility, 12 UX laws |
-| [`design-audit`](skills/design-audit/SKILL.md) | [TypeUI](https://github.com/bergside/typeui) | UI audit — spacing, typography, contrast, components, interaction, accessibility. Compliance check |
+| Навык | Источник | Описание |
+|-------|----------|----------|
+| [`design-system`](design-system/SKILL.md) | [TypeUI](https://github.com/bergside/typeui) | Универсальные принципы — 4pt grid, typography scale, WCAG, 12 UX-законов |
+| [`design-audit`](design-audit/SKILL.md) | [TypeUI](https://github.com/bergside/typeui) | Аудит UI — spacing, typography, contrast, components, interaction, accessibility |
 
 ---
 
-## Usage
+## Использование
 
-### Natural Language
+### На естественном языке
 
-Just describe what you need — MiMoCode picks the right skill:
+Просто опишите задачу — MiMoCode подберёт навык:
 
 ```
 Проведи ревью кода на ветке feature/auth
-Обеги дебаг: упал запрос к API
+Обеги дебаг: упал запрос к API, вот ошибка...
 Сделай QA тестирование сайта https://staging.myapp.com
 Проведи security review этого модуля
 ```
 
-### Explicit Skill Name
+### Явное указание навыка
 
-Mention the skill name directly:
+Напишите имя навыка:
 
 ```
 Запусти code-review
@@ -128,9 +130,9 @@ Mention the skill name directly:
 Запусти pentest для тестирования эндпоинта
 ```
 
-### Combine Skills
+### Комбинация навыков
 
-Chain multiple skills in one task:
+Объедините несколько навыков в одну задачу:
 
 ```
 Сделай код-ревью, потом верификацию, потом security review
@@ -138,29 +140,29 @@ Chain multiple skills in one task:
 
 ---
 
-## Workflows
+## Рабочие процессы
 
-### New Feature
+### Новая фича
 ```
 search-first → tdd-workflow → code-review → verification-loop
 ```
 
-### Bug Fix
+### Баг-фикс
 ```
 investigate → code-audit → verification-loop
 ```
 
-### Pre-Release
+### Перед релизом
 ```
 code-review → security-review → qa-test → verification-loop
 ```
 
-### Security Audit
+### Security аудит
 ```
 code-audit → security-review → pentest
 ```
 
-### Incident
+### Инцидент
 ```
 incident-response → threat-hunting → code-audit
 ```
@@ -172,147 +174,147 @@ design-system → design-audit
 
 ---
 
-## Skill Details
+## Подробное описание каждого навыка
 
 ### code-review
 
-**When:** Before merging PRs, reviewing diffs
+**Когда:** перед мержем PR, при проверке диффа
 
 **Workflow:**
-1. Detect base branch and get diff
-2. Apply critical categories: SQL safety, race conditions, shell injection, type coercion
-3. Score confidence (1-10) and severity (P0-P3)
-4. Output structured findings
+1. Определяет base branch и получает diff
+2. Проверяет критичные категории: SQL injection, race conditions, shell injection, type coercion
+3. Оценивает confidence (1-10) и severity (P0-P3)
+4. Выводит структурированные находки
 
-**Example output:**
+**Пример вывода:**
 ```
-[P1] (confidence: 9/10) app/models/user.rb:42 — SQL injection via string interpolation
-Fix: Use parameterized queries
+[P1] (confidence: 9/10) app/models/user.rb:42 — SQL injection через интерполяцию строк
+Fix: Использовать параметризованные запросы
 ```
 
 ### investigate
 
-**When:** Bugs, errors, "it was working yesterday"
+**Когда:** баги, ошибки, "вчера работало"
 
 **Workflow:**
-1. Root Cause Investigation — collect symptoms, read code, check changes
+1. Root Cause Investigation — собирает симптомы, читает код, проверяет изменения
 2. Pattern Analysis — race condition, null propagation, state corruption
-3. Hypothesis Testing — verify before fixing. 3-strike rule
-4. Implementation — minimal diff, regression test
+3. Hypothesis Testing — проверяет перед фиксом. 3-strike rule
+4. Implementation — минимальный diff, regression test
 5. Verification & Report
 
-**Iron Law:** No fixes without root cause.
+**Iron Law:** Нет фикса без root cause.
 
 ### qa-test
 
-**When:** "Does this work?", pre-launch testing
+**Когда:** "does this work?", тестирование перед релизом
 
-**Tiers:**
-- Quick: Critical/high only
-- Standard: + medium issues
+**Tier'ы:**
+- Quick: Только critical/high
+- Standard: + medium
 - Exhaustive: + cosmetic
 
-**Health score:** Weighted average across Console, Links, Visual, Functional, UX, Performance, Content, Accessibility.
+**Health score:** Взвешенное среднее по Console, Links, Visual, Functional, UX, Performance, Content, Accessibility.
 
 ### search-first
 
-**When:** Before writing new code
+**Когда:** перед написанием нового кода
 
-**Decision matrix:**
-| Signal | Action |
-|--------|--------|
-| Exact match, well-maintained | Adopt |
-| Partial match | Extend (wrapper) |
-| Multiple weak matches | Compose |
-| Nothing found | Build custom |
+**Матрица решений:**
+| Сигнал | Действие |
+|--------|----------|
+| Точное совпадение, поддерживается | Adopt |
+| Частичное совпадение | Extend (обёртка) |
+| Слабые совпадения | Compose |
+| Ничего не найдено | Build |
 
 ### verification-loop
 
-**When:** After features, before PRs, after refactoring
+**Когда:** после фич, перед PR, после рефакторинга
 
-**Phases:** Build → Type Check → Lint → Tests → Security → Diff
+**Фазы:** Build → Type Check → Lint → Tests → Security → Diff
 
-**Rule:** Stop and fix if any phase fails.
+**Правило:** Стоп и фикс если любая фаза упала.
 
 ### tdd-workflow
 
-**When:** New features, bug fixes, refactoring
+**Когда:** новые фичи, баг-фиксы, рефакторинг
 
-**Cycle:** RED (failing test) → GREEN (minimal code) → REFACTOR (clean up)
+**Цикл:** RED (падающий тест) → GREEN (минимальный код) → REFACTOR (очистка)
 
-**Requirements:** 80%+ coverage, git checkpoints after each stage.
+**Требования:** 80%+ coverage, git checkpoints после каждого этапа.
 
 ### security-review
 
-**When:** Auth, input handling, API endpoints, secrets
+**Когда:** auth, обработка ввода, API эндпоинты, секреты
 
-**Checklist:** Secrets, Input Validation, Auth, API Security, Data Protection
+**Чеклист:** Secrets, Input Validation, Auth, API Security, Data Protection
 
 ### code-audit
 
-**When:** Security audit, compliance
+**Когда:** security аудит, compliance
 
-**Process:** Detect language → Run static analysis → Check vulnerability patterns → Framework-specific checks
+**Процесс:** Определение языка → Static analysis → Паттерны уязвимостей → Framework-specific проверки
 
-**Tools:** bandit, semgrep, gosec, brakeman, spotbugs
+**Инструменты:** bandit, semgrep, gosec, brakeman, spotbugs
 
 ### pentest
 
-**When:** Authorized penetration testing only
+**Когда:** авторизованный пентест
 
-**PTES Lifecycle:** Recon → Scanning → Exploitation → Post-Exploitation → Report
+**PTES:** Recon → Scanning → Exploitation → Post-Exploitation → Report
 
-**⚠️ Authorized use only.** Never test systems without written permission.
+**⚠️ Только для авторизованного тестирования!**
 
 ### incident-response
 
-**When:** Responding to security incidents
+**Когда:** реагирование на инциденты
 
-**Framework:** PICERL (Preparation, Identification, Containment, Eradication, Recovery, Lessons Learned)
+**Фреймворк:** PICERL (Preparation, Identification, Containment, Eradication, Recovery, Lessons Learned)
 
-**Playbooks:** Ransomware, Phishing/BEC, Data Breach, Insider Threat
+**Плейбуки:** Ransomware, Phishing/BEC, Data Breach, Insider Threat
 
 ### threat-hunting
 
-**When:** Proactive threat search
+**Когда:** proactive поиск угроз
 
-**Process:** Form hypothesis → Identify data sources → Investigate → Map to MITRE ATT&CK → Create detection rules
+**Процесс:** Гипотеза → Источники данных → Расследование → MITRE ATT&CK → Detection rules
 
 ### design-system
 
-**When:** Design decisions, UI components
+**Когда:** дизайн-решения, UI компоненты
 
-**Principles:**
+**Принципы:**
 - 4-point grid (4, 8, 12, 16, 24, 32, 48, 64, 96 px)
-- Inner gaps < outer gaps (proximity grouping)
+- Inner gaps < outer gaps
 - Typography: min 16px primary, 14px secondary
-- Accessibility: WCAG 2.1/2.2 AA baseline
+- Accessibility: WCAG 2.1/2.2 AA
 
 ### design-audit
 
-**When:** UI review before launch
+**Когда:** ревью UI перед релизом
 
-**Categories:** Spacing, Typography, Contrast, Components, Interaction, Accessibility
+**Категории:** Spacing, Typography, Contrast, Components, Interaction, Accessibility
 
 ---
 
-## Compatibility
+## Совместимость
 
-These skills work with any AI coding agent that supports markdown files:
+Навыки работают с любым AI-агентом, поддерживающим markdown:
 
 - MiMoCode
 - Claude Code
 - Codex
 - Cursor
 - OpenCode
-- Any agent that reads SKILL.md files
+- Любой агент, читающий SKILL.md
 
 ---
 
-## Sources
+## Источники
 
-| Repository | Stars | Skills Adapted |
-|------------|-------|----------------|
+| Репозиторий | Звёзд | Навыков адаптировано |
+|------------|-------|---------------------|
 | [gstack](https://github.com/garrytan/gstack) | 119K | code-review, investigate, qa-test |
 | [ECC](https://github.com/affaan-m/ECC) | 225K | search-first, verification-loop, security-review, tdd-workflow |
 | [TypeUI](https://github.com/bergside/typeui) | — | design-system, design-audit |
@@ -321,39 +323,39 @@ These skills work with any AI coding agent that supports markdown files:
 
 ---
 
-## Contributing
+## Вклад
 
-1. Fork the repo
-2. Create your skill: `mkdir skills/my-skill`
-3. Write `SKILL.md` following the existing format
-4. Submit a PR
+1. Форкните репозиторий
+2. Создайте навык: `mkdir skills/my-skill`
+3. Напишите `SKILL.md` по существующему формату
+4. Отправьте PR
 
-**Skill format:**
+**Формат навыка:**
 ```markdown
 ---
 name: skill-name
-description: What it does
-origin: source repo
+description: Что делает
+origin: исходный репо
 ---
 
-## When to Use
+## Когда использовать
 ...
 
 ## Workflow
-### Step 1: ...
-### Step 2: ...
+### Шаг 1: ...
+### Шаг 2: ...
 
-## Output
+## Вывод
 ```
 
 ---
 
-## License
+## Лицензия
 
-MIT — use freely in personal and commercial projects.
+MIT — свободное использование в личных и коммерческих проектах.
 
 ---
 
 <p align="center">
-  <sub>Built with care for the AI coding community</sub>
+  <sub>Создано с заботой для AI coding сообщества</sub>
 </p>

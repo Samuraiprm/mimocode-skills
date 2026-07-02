@@ -1,37 +1,37 @@
-# MiMoCode Skills
+# MiMoCode Skills — Быстрый старт
 
-13 production-ready skills for AI coding agents — cybersecurity, design, engineering workflows.
+13 готовых навыков для AI-агентов — кибербезопасность, дизайн, инженерные процессы.
 
-## Quick Install
+## Установка
 
 ```bash
-# Full install
+# Полная установка
 git clone https://github.com/Samuraiprm/mimocode-skills.git ~/.mimocode/skills
 
-# Or pick specific skills
+# Или выбрать конкретные навыки
 git clone https://github.com/Samuraiprm/mimocode-skills.git /tmp/mimocode-skills
 cp -r /tmp/mimocode-skills/code-review ~/.mimocode/skills/
 ```
 
-## Skills
+## Навыки
 
-| Skill | Category | Description |
-|-------|----------|-------------|
-| code-review | Engineering | PR review with confidence scoring |
-| investigate | Engineering | Systematic debugging, root cause analysis |
-| qa-test | Engineering | QA testing with health scores |
-| search-first | Engineering | Research before coding |
-| verification-loop | Engineering | Quality gates: build→types→lint→tests |
-| tdd-workflow | Engineering | TDD: RED→GREEN→REFACTOR |
-| security-review | Security | Security checklist and verification |
-| code-audit | Security | Static analysis and vulnerability patterns |
-| pentest | Security | PTES penetration testing methodology |
-| incident-response | Security | NIST/SANS IR playbooks |
-| threat-hunting | Security | Proactive threat hunting, MITRE ATT&CK |
-| design-system | Design | Universal UI/UX principles |
-| design-audit | Design | UI compliance audit |
+| Навык | Категория | Описание |
+|-------|-----------|----------|
+| code-review | Инженерия | Ревью PR с оценкой уверенности |
+| investigate | Инженерия | Систематический дебаггинг, root cause |
+| qa-test | Инженерия | QA тестирование с health scores |
+| search-first | Инженерия | Исследование перед кодом |
+| verification-loop | Инженерия | Quality gates: build→types→lint→tests |
+| tdd-workflow | Инженерия | TDD: RED→GREEN→REFACTOR |
+| security-review | Безопасность | Чеклист и верификация безопасности |
+| code-audit | Безопасность | Static analysis и паттерны уязвимостей |
+| pentest | Безопасность | Методология PTES |
+| incident-response | Безопасность | Плейбуки NIST/SANS |
+| threat-hunting | Безопасность | Proactive hunting, MITRE ATT&CK |
+| design-system | Дизайн | Универсальные принципы UI/UX |
+| design-audit | Дизайн | Аудит UI на соответствие |
 
-## Usage
+## Использование
 
 ```
 Проведи ревью кода
@@ -39,4 +39,4 @@ cp -r /tmp/mimocode-skills/code-review ~/.mimocode/skills/
 Сделай security review
 ```
 
-See [README.md](README.md) for full documentation.
+Подробная документация: [README.md](README.md)
