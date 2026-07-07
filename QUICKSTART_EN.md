@@ -1,42 +1,80 @@
-# MiMoCode Skills
+# Quick Start - MiMoCode Skills
 
-13 production-ready skills for AI coding agents — cybersecurity, design, engineering workflows.
+## Installation
 
-## Quick Install
+### Option 1: Clone entirely (recommended)
 
 ```bash
-# Full install
-git clone https://github.com/Samuraiprm/mimocode-skills.git ~/.mimocode/skills
-
-# Or pick specific skills
-git clone https://github.com/Samuraiprm/mimocode-skills.git /tmp/mimocode-skills
-cp -r /tmp/mimocode-skills/code-review ~/.mimocode/skills/
+git clone https://github.com/Samuraiprm/mimocode-skills.git ~/.mimocode/skills/
 ```
 
-## Skills
+### Option 2: Copy individual skills
 
-| Skill | Category | Description |
-|-------|----------|-------------|
-| code-review | Engineering | PR review with confidence scoring |
-| investigate | Engineering | Systematic debugging, root cause analysis |
-| qa-test | Engineering | QA testing with health scores |
-| search-first | Engineering | Research before coding |
-| verification-loop | Engineering | Quality gates: build→types→lint→tests |
-| tdd-workflow | Engineering | TDD: RED→GREEN→REFACTOR |
-| security-review | Security | Security checklist and verification |
-| code-audit | Security | Static analysis and vulnerability patterns |
-| pentest | Security | PTES penetration testing methodology |
-| incident-response | Security | NIST/SANS IR playbooks |
-| threat-hunting | Security | Proactive threat hunting, MITRE ATT&CK |
-| design-system | Design | Universal UI/UX principles |
-| design-audit | Design | UI compliance audit |
+```bash
+# Frontend design skills
+cp -r taste-engineering ~/.mimocode/skills/
+cp -r design-engineering ~/.mimocode/skills/
+cp -r impeccable ~/.mimocode/skills/
+cp -r review-animations ~/.mimocode/skills/
+cp -r animation-vocabulary ~/.mimocode/skills/
+cp -r premium-visual-design ~/.mimocode/skills/
+cp -r minimalist-ui ~/.mimocode/skills/
+cp -r industrial-brutalist-ui ~/.mimocode/skills/
+cp -r redesign-existing ~/.mimocode/skills/
+cp -r full-output-enforcement ~/.mimocode/skills/
 
-## Usage
+# Security
+cp -r code-audit ~/.mimocode/skills/
+cp -r code-review ~/.mimocode/skills/
+cp -r pentest ~/.mimocode/skills/
 
-```
-Проведи ревью кода
-Запусти investigate для этого бага
-Сделай security review
+# IoT skills
+cp -r iot-* ~/.mimocode/skills/
 ```
 
-See [README.md](README.md) for full documentation.
+### Option 3: Clone into project folder
+
+```bash
+cd your-project
+git clone https://github.com/Samuraiprm/mimocode-skills.git .mimocode/
+```
+
+## Getting Started
+
+### Frontend Design
+
+```
+Create a landing page using taste-engineering
+```
+
+```
+Review animations in this component using review-animations
+```
+
+```
+Audit an existing project using redesign-existing
+```
+
+### Security
+
+```
+Review this PR for security issues
+```
+
+```
+Audit this endpoint for vulnerabilities
+```
+
+### IoT
+
+```
+Analyze this device firmware using iot-apktool
+```
+
+```
+Scan the network for IoT devices using iot-nmap
+```
+
+## Full Skill List
+
+See [README_EN.md](README_EN.md) for the complete catalog.
